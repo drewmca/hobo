@@ -90,7 +90,7 @@ module HoboFields
       index_options = {}
       index_options[:name] = options.delete(:index) if options.has_key?(:index)
       bt = belongs_to_without_field_declarations(name, options, &block)
-      puts "AVAILABLE REFLECTIONS:"
+      puts "AVAILABLE REFLECTIONS for '#{name}:"
       puts reflections
       refl = reflections[name] || reflections[name.to_sym]
       fkey = refl.foreign_key
